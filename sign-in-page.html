@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="download__2_-removebg-preview.png" type="image/x-icon">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif ;
+    }
+    body{
+        background-image: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(netflix1.jpg);
+    }
+    .header{
+        /* padding: 20px 50px;
+        position: relative; */
+        width: 100%;
+    }
+    .logo img{
+        width: 200px;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+    .signinsection{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .sign-in-box{
+        position: relative;
+        height: 600px;
+        width: 450px;
+        padding: 65px;
+        /* margin-left: 35%; */
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px ;
+        box-sizing: border-box;
+    }
+    .sign-in-box h2{
+        font-size: 30px;
+        color: white;
+        margin-top :0px ;
+        margin-bottom: 25px;
+    }
+    .sign-in-form input{
+        height: 50px;
+        width: 100%;
+        color: white;
+        background-color: #333;
+        box-sizing: border-box;
+        padding: 15px;
+        border: none;
+        /* outline: none; */
+        border-radius: 3px;
+    }
+    .sign-in-form{
+        margin-bottom: 15px;
+    }
+    .sign-in-btn{
+        height: 50px;
+        color: white;
+        width: 100%;
+        background-color: red;
+        border-radius: 3px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .support{
+        display: flex;
+        color: #b3b3b3;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .rember{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .rember input{
+        margin-right: 5px;
+    }
+    .need-help a{
+        text-decoration: none;
+        color: #b3b3b3;
+    }
+    .need-help a:hover{
+        text-decoration: underline ;
+    }
+    .login-section{
+        color: #b3b3b3;
+    }
+    .login-facebook{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        color: #737373;
+        margin-bottom: 15px;
+    }
+    .login-facebook img{
+        width: 20px;
+        height: 20px;
+    }
+    .login-facebook a{
+        text-decoration: none;
+        color: #737373;
+        margin-left: 5px;
+        font-size: 13px;
+    }
+    a{
+         text-decoration: none;
+    }
+    .sign-up{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .sign-up a{
+        color: white;
+    }
+    .sign-up a:hover{
+        text-decoration: underline ;
+    }
+    .term-condition {
+        font-size: 13px;
+    }
+    .term-condition a{
+        color: #0071eb;
+    }
+    .term-condition a:hover{
+        text-decoration: underline ;
+    }
+    /* footer section */
+    footer{
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .footer-section, .footer-section-1{
+        color: grey;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-section-2-column{
+        padding: 30px 0px;
+        padding-right: 70px;
+
+    }
+    .footer-section-2-column p{
+        padding: 5px 0px;
+    }
+    .footer-section-2-column p a, .footer-section a{
+        text-decoration: none;
+        color: gray;
+    }
+    .call{
+        text-decoration: none;
+    }
+    .call:hover{
+        text-decoration: underline;
+        color: grey;
+    }
+    .signinandlanguage{
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+    }  
+    #lang-enghindi-1{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        padding: 12px 17px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: 1px solid grey;
+    } 
+    #lang-enghindi-1 option{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background-color: black;
+        font-size: 15px;
+        padding: 10px;
+    }
+    /* first media screen */
+    @media(max-width:740px){
+      .body{
+        background-image: none;
+        background-color: black;
+      } 
+      .logo img{
+        width: 215px;
+        margin-top: -20px;
+        margin-left: 0px;
+      } 
+      .sign-in-box{
+        height: 520px;
+        width: 95%;
+        padding: 0px;
+        background: none;
+        border-radius: 10px;
+        box-sizing: border-box;
+      } 
+      .login-section{
+        padding-top: 20px;
+      }
+      .greyline{
+        width: 100%;
+        background-color: #333;
+        height: 2px;
+      }
+      footer{
+        margin-top: 0px;
+        margin: 0px 5px;
+      }
+      .footer-section-2-column{
+        padding-right: 30px;
+      }
+      .footer-section-2-column p a, .footer-section a{
+        text-decoration: none;
+        color: grey;
+        font-size: 15px;
+      }
+      .footer-section-2-column p a:hover{
+        text-decoration: underline;
+      }
+      /* .2nd media screen*/
+    }
+    @media(max-width:540px) {
+        .body{
+        background-image: none;
+        background-color: black;
+      } 
+        .footer-section-2-column p{
+            font-size: 13px;
+        }
+        .footer-section-2-column{
+            padding-right: 20px;
+        }
+    }
+    /* 3rd media screen */
+    @media(max-width:500px) {
+        .footer-section-1{
+            flex-direction: column;
+        }
+        .footer-section-2-column{
+            padding:5px 0px;
+        }
+    }
+
+</style>
+<body>
+    <div class="body">
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="netflix-signin.png" alt="netflix-logo">
+                </a>    
+            </div>
+        </header>
+        <div class="signinsection">
+            <div class="sign-in-box">
+                <h2>Sign in </h2>
+                <form action=" ">
+                    <div class="sign-in-form">
+                        <input type="text" name="email" placeholder="Email or phone number" required>
+                    </div>
+                    <div class="sign-in-form">
+                        <input type="text" placeholder="password" required>
+                    </div>
+                    <div class="sign-in-btn">Sign in</div>
+                    <div class="support">
+                        <div class="rember">
+                            <input type="checkbox">
+                            Rember me
+                        </div>
+                        <div class="need-help">
+                            <a href="#">Need help </a>
+                        </div>
+                    </div>
+                    <div class="login-section">
+                        <div class="login-facebook">
+                            <img src="facebook-logo-13.png" alt="Facebook">
+                            <a href="#">login with Facebook</a>
+                        </div>
+                        <div class="sign-up">
+                            <p>New to Netflix <a href="#">Sign up now.</a></p>
+                        </div>
+                        <div class="term-condition">
+                            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#"> Learn more.</a> </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="greyline"></div>
+        <footer>
+            <div class="footerfull">
+                <div class="footer-section">
+                    <p style="text-align: left;">Question? Call &nbsp;
+                        <div class="call"><a href="#">000-800-040-1843</a></div>
+                    </p>
+                </div>
+                <div class="footer-section-1">
+                    <div class="footer-section-2-column">
+                        <p><a href="">FAQ</a></p>
+                        <p><a href="">Cookie preferences</a></p>
+                    </div>
+                    <div class="footer-section-2-column">
+                        <p><a href="">Help Center</a></p>
+                        <p><a href="">Coorporate Information</a></p>
+                    </div>
+                    <div class="footer-section-2-column">
+                        <p><a href="">T erm of Use</a></p>
+                        <p><a href="">Privacy</a></p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div class="signandlanguage">
+                        <div class="languagesection">
+                            <select name="languagesection" id="lang-enghindi-1">
+                                <option value="English">English</option>
+                                <option value="Hindi">Hindi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </div>
+</body>
+</html>  
